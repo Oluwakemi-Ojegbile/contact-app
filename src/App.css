@@ -1,38 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 90px;
+}
+.main_wrapper {
+  border: 2px solid #9c654d;
+  border-radius: 5px;
+  width: 440px;
+  height: 659px;
+}
+.top_wrapper {
+  display: flex;
+  padding: 10px;
+  background: #766c5d;
+  top: 0;
+}
+.profile_info {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.navBar {
+  width: 100%;
+  background: #f47564;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBar a {
+  color: #e4dcdc;
+  text-decoration: none;
+}
+.menu {
+  padding: 10px;
+}
+.initial {
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  background: #3b302f;
+  color: #e4dcdc;
+}
+.contact_info {
+  line-height: 2px;
+  padding-left: 15px;
+  text-align: justify;
+}
+.contact_name {
+  font-weight: 600;
+  color: #d1675f;
+}
+.contact_no {
+  color: #464444;
+  font-size: 10px;
+}
+.search_input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+}
+.contact_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #e4e2e2;
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin: 2px auto;
+  padding: 25px;
+  text-align: left;
+}
+.contact_wrapper a {
+  text-decoration: none;
+}
+.contact_wrapper:nth-child(2n) {
+  background: #f7f7f7;
+}
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background: #b91616;
+  display: none;
+}
+.addContact_btn {
+  position: absolute;
+  transform: translateX(360px);
+  cursor: pointer;
+  bottom: 25px;
+  outline: none;
+  border-radius: 50%;
+  font-size: 30px;
+  background: #f47564;
+  color: white;
+  height: 50px;
+  width: 50px;
+}
+.top_detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.titley {
+  font-weight: 600;
+  text-align: center;
+  color: #f0f0f0;
+}
+.edit_btn {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+.back_arrow {
+  font-size: 19px;
+}
+.common {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #f0f0f0;
+  background: #f47564;
+  border-radius: 5px;
+}
+.close_btn { background: #f47564; }
+.saveClose_btn {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.save_btn { background: rgb(149, 184, 97); }
+.contact_wrapper:hover .delete-btn { display: block; }
+.homepage {
+  overflow-y: scroll;
+  height: 515px;
+}
+.noContact {
+  color: #b91616;
+  text-align: center;
+  font-weight: 600;
+}
+.modal_wrapper {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.overlay {
+  position: absolute;
+  background: #313131b6;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+}
+.form_wrapper {
+  margin: 150px auto;
+  width: 380px;
+  padding: 20px;
+  background: #c7c7c7;
+  border-radius: 10px;
+  border: none;
+}
+.form_wrapper input {
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+}
+.isActive {
+  background-color: #b91616;
+  border-radius: 3px;
+  transition: all 300ms ease-in-out;
+}
+.error_msg {
+  margin-left: 5px;
+  margin-top: -10px;
+  color: red;
+  font-size: 11px;
+}
+.detail_wrapper {
+  height: 78%;
+  width: 100%;
+  background: #f0f0f0;
+  color: #000;
+}
+.detail { display: block; }
+.detail p {
+  background: #f47564;
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.detail p:nth-child(2n) {
+  background: #ffffff;
+  color: #000;
+  font-weight: 500;
+}
+select {
+  width: 100%;
+  height: 35px;
+  outline: none;
+  border: none;
+  color: gray;
+  margin-top: 10px;
 }
